@@ -1,9 +1,9 @@
 package org.example;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
-// Adaptador para convertir MiArray a List<Integer>
 public class AdapterList implements MiArray {
     private List<Integer> lista;
 
@@ -62,4 +62,3 @@ public class AdapterList implements MiArray {
         return 0;
     }
 }
-
