@@ -1,0 +1,36 @@
+@startuml
+class org.example.AdapterList {
+- List<Integer> lista
++ void aadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamao()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+interface org.example.MiArray {
++ void aadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamao()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+class org.example.IVentana {
+- MiArray adaptadorLista
+- JTextArea resultTextArea
+- void addButton(String,ActionListener,JPanel)
+- void updateResultText()
+}
+class org.example.Main {
++ {static} void main(String[])
+}
+
+
+org.example.MiArray <|.. org.example.AdapterList
+org.example.JFrame <|-- org.example.IVentana
+@enduml
